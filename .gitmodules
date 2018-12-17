@@ -1,3 +1,4 @@
 [submodule "vendor/trezor-common"]
-	path = vendor/trezor-common
-	url = https://github.com/trezor/trezor-common.git
+    path = vendor/trezor-common
+    branch = onegram
+	url = https://gitlab.com/trezor-onegram/trezor-common.git
