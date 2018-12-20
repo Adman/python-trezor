@@ -20,6 +20,7 @@ Use the following command to see all options:
     --help           Show this message and exit.
 
   Commands:
+<<<<<<< cac8341510578abc9b9e5c8cc00dde71a1c56ff0
     backup-device                   Perform device seed backup.
     cardano-get-address             Get Cardano address.
     cardano-get-public-key          Get Cardano public key.
@@ -52,6 +53,8 @@ Use the following command to see all options:
     monero-get-watch-key            Get Monero watch key for specified path.
     nem-get-address                 Get NEM address for specified path.
     nem-sign-tx                     Sign (and optionally broadcast) NEM transaction.
+    onegram_get_public_key          Get Onegram public key in base58 encoding.
+    onegram_sign_tx                 Sign Onegram transaction.
     ontology-get-address            Get Ontology address for specified path.
     ontology-get-public-key         Get Ontology public key for specified path.
     ontology-sign-ont-id-add-attributes
