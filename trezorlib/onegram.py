@@ -96,7 +96,7 @@ def public_key_to_buffer(pub_key):
 
 # ====== Client functions ====== #
 
-@expect(proto.EosPublicKey)
+@expect(proto.OnegramPublicKey)
 def get_public_key(client, n, show_display=False, multisig=None):
     response = client.call(proto.OnegramGetPublicKey(address_n=n, show_display=show_display))
     return response
