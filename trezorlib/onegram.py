@@ -100,3 +100,9 @@ def public_key_to_buffer(pub_key):
 def get_public_key(client, n, show_display=False, multisig=None):
     response = client.call(proto.OnegramGetPublicKey(address_n=n, show_display=show_display))
     return response
+
+
+@expect(proto.OnegramSignedTx)
+def sign_tx(client, address_n, sign_tx_msg):
+    sign_tx_msg.address_n = address_n
+    return client.call(sign_tx_msg)
