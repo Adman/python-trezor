@@ -1951,22 +1951,20 @@ def ontology_sign_ont_id_add_attributes(
 
     return output
 
+
 #
 # ONEGRAM functions
 #
-
-
-@cli.command(help="Get Onegram public key in base58 encoding.")
+@cli.command(help="Get Onegram public key.")
 @click.option(
-    "-n", "--address", required=True, help="BIP-32 path, e.g. m/44'/204'/0'/0/0"
+    "-n", "--address", required=True, help="BIP-32 path, e.g. m/48'/10'/0'/0'/0'"
 )
 @click.option("-d", "--show-display", is_flag=True)
 @click.pass_obj
 def onegram_get_public_key(connect, address, show_display):
     client = connect()
     address_n = tools.parse_path(address)
-    res = onegram.get_public_key(client, address_n, show_display)
-    return "WIF: %s\nRaw: %s" % (str(res.wif_public_key), res.raw_public_key.hex())
+    return onegram.get_public_key(client, address_n, show_display)
 
 
 @cli.command(help="Sign Onegram transaction.")
