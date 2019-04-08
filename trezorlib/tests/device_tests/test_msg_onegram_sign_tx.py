@@ -16,8 +16,6 @@
 
 import pytest
 
-from binascii import hexlify
-
 from trezorlib import messages, onegram
 from trezorlib.protobuf import dict_to_proto
 from trezorlib.tools import parse_path
@@ -60,7 +58,7 @@ class TestMsgOnegramSignTx(TrezorTest):
             ),
         )
         assert (
-            hexlify(resp.signature)
+            resp.signature.hex()
             == "2008214b63885393a9f89164659e9f06aa9361db5b016f257bd2142034901ee44c05355a97a394432737bacd844b4468b2775d01906a183f48941979291fb51109"
         )
         assert (
