@@ -20,7 +20,6 @@ Use the following command to see all options:
     --help           Show this message and exit.
 
   Commands:
-<<<<<<< cac8341510578abc9b9e5c8cc00dde71a1c56ff0
     backup-device                   Perform device seed backup.
     cardano-get-address             Get Cardano address.
     cardano-get-public-key          Get Cardano public key.
